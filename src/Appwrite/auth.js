@@ -3,7 +3,7 @@ import { Client, Account, ID } from "appwrite";
 
 export class Authservice{
     client = new Client()
-    Account;
+    account;
  // To use the Resources minimal, we will use the constructor as it will first create the Client and then will create an account
     constructor(){
         this.client
