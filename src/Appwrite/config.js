@@ -40,7 +40,7 @@ export class Services{
             }
         }
     //DeletePost Function
-        async deletePost(ID){
+         async deletePost(ID){
             try {
                 return await this.databases.deleteDocument(
                     conf.appwriteDatabaseId , conf.appwriteCollectionId , ID
