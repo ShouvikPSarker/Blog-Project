@@ -53,21 +53,21 @@ function Login() {
                         label='Email'
                         type='email'
                         placeholder='Enter Your Email'
-                        {...register('email'),{
+                        {...register('email',{
                             required: true,
                             validate: {
                                 matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                                 "Email address must be a valid address",
                             }
-                        }}
+                        })}
                     />
                     <Input 
                         label='Password'
                         type='password'
                         placeholder='Enter Your Password'
-                        {...register('password') , {
+                        {...register('password' , {
                             required: true
-                        }}
+                        })}
                     />
                     <Button className = 'w-full' type='submit'>
                         Sign IN

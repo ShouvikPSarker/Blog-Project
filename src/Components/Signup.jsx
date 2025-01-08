@@ -3,8 +3,8 @@ import {Link , useNavigate} from 'react-router-dom'
 import {Button , Input , Logo} from './index'
 import {useForm} from 'react-hook-form'
 import { useDispatch } from 'react-redux'
-import { login } from '../Store/authslice'
-import {authService} from '../Appwrite/auth'
+import { login as authlogin} from '../Store/authslice'
+import authService from '../Appwrite/auth'
 
 function Signup() {
   const navigate = useNavigate()
@@ -57,21 +57,21 @@ function Signup() {
               label='Email'
               type='email'
               placeholder='Enter Your Email'
-              {...register('email'),{
+              {...register('email',{
                   required: true,
                   validate: {
                       matchPatern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                       "Email address must be a valid address",
                   }
-              }}
+              })}
             />
             <Input 
               label='Password'
               type='password'
               placeholder='Enter Your Password'
-              {...register('password') , {
+              {...register('password' , {
                   required: true
-              }}
+              })}
             />
           <Button className = 'w-full' type='submit'>
             Submit
