@@ -6,6 +6,11 @@ import Logo from "./Logo";
 import RTE from "./RTE";
 import Select from "./Select";
 import Button from "./Button";
+import Postcard from "./Postcard";
+import Signup from "./Signup";
+import Login from "./Login";
+import Input from "./Input";
+import {AuthLayout} from "./AuthLayout" 
 export{
     Header , 
     Footer , 
@@ -15,4 +20,9 @@ export{
     RTE,
     Button,
     Select,
+    Postcard,
+    Signup,
+    Login,
+    Input,
+    AuthLayout
 }
