@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { appwriteservice as appwriteService } from "../appwrite/config";
+import appwriteservice from "../Appwrite/config";
 import { Button, Container } from "../components";
 import parse from "html-react-parser";
 import { useSelector } from "react-redux";
@@ -16,7 +16,7 @@ export default function Post() {
 
     useEffect(() => {
         if (id) {
-            appwriteService.getPost(id).then((post) => {
+            appwriteservice.getPost(id).then((post) => {
                 if (post) setPost(post);
                 else navigate("/");
             });
@@ -24,9 +24,9 @@ export default function Post() {
     }, [id, navigate]);
 
     const deletePost = () => {
-        appwriteService.deletePost(post.$id).then((status) => {
+        appwriteservice.deletePost(post.$id).then((status) => {
             if (status) {
-                appwriteService.deleteFile(post.featuredImage);
+                appwriteservice.deleteFile(post.featuredImage);
                 navigate("/");
             }
         });

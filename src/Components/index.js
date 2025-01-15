@@ -10,7 +10,7 @@ import Postcard from "./Postcard";
 import Signup from "./Signup";
 import Login from "./Login";
 import Input from "./Input";
-import {AuthLayout} from "./AuthLayout" 
+import AuthLayout from "./AuthLayout";
 export{
     Header , 
     Footer , 

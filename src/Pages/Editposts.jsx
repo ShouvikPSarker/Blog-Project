@@ -1,7 +1,8 @@
 import React , {useState , useEffect}from 'react'
 import appwriteservice from '../Appwrite/config'
 import {useParams , useNavigate} from 'react-router-dom'
-import {Container , PostForm} from '../Components'
+import {Container } from '../Components'
+import PostForm from '../Components/Post-Form/PostForm'
 function Editposts() {
     const navigate = useNavigate()
     const {id} = useParams()
